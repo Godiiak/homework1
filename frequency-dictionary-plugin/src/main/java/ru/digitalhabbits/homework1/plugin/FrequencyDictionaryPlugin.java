@@ -9,7 +9,8 @@ public class FrequencyDictionaryPlugin
     @Nullable
     @Override
     public String apply(@Nonnull String text) {
-        // TODO: NotImplemented
-        return "FrequencyDictionaryPlugin: NotImplemented";
+        return getWords(text).entrySet().stream()
+                .map((x) -> x.getKey() + " " + x.getValue() + '\n')
+                .reduce((x, y) -> x + y).get().trim();
     }
 }

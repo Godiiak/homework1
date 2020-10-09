@@ -24,7 +24,7 @@ public class WikipediaSearchEngine {
         final WikipediaClient client = new WikipediaClient();
         final String text = client.search(searchString);
 
-        // 2. очистить папку с результатами
+        // 2. Очистить папку с результатами
         final FileEngine fileEngine = new FileEngine();
         fileEngine.cleanResultDir();
 
